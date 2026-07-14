@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>今晚吃啥 · 菜品转盘</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="ambient" aria-hidden="true"></div>
+
+    <main class="app">
+      <header class="brand">
+        <p class="brand__mark">今晚吃啥</p>
+        <h1 class="brand__title">转盘决定菜单</h1>
+        <p class="brand__sub">加入菜品，点一下转盘，让运气帮你点菜。</p>
+      </header>
+
+      <section class="stage" aria-label="转盘区域">
+        <div class="wheel-wrap">
+          <div class="pointer" aria-hidden="true"></div>
+          <canvas id="wheel" width="520" height="520" role="img" aria-label="菜品转盘"></canvas>
+          <button id="spinBtn" class="spin-btn" type="button">开始</button>
+        </div>
+
+        <div id="result" class="result" aria-live="polite">
+          <span class="result__label">今日推荐</span>
+          <strong id="resultName" class="result__name">先加几道菜吧</strong>
+        </div>
+      </section>
+
+      <section class="panel" aria-label="菜品管理">
+        <form id="dishForm" class="dish-form">
+          <label class="dish-form__label" for="dishInput">新增菜品</label>
+          <div class="dish-form__row">
+            <input
+              id="dishInput"
+              name="dish"
+              type="text"
+              maxlength="16"
+              placeholder="例如：红烧肉、麻辣烫…"
+              autocomplete="off"
+              required
+            />
+            <button type="submit">添加</button>
+          </div>
+        </form>
+
+        <ul id="dishList" class="dish-list"></ul>
+
+        <div class="panel__actions">
+          <button id="clearBtn" class="ghost-btn" type="button">清空全部</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
