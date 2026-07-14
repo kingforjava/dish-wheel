@@ -1,5 +1,5 @@
 const STORAGE_KEY = "dish-wheel-items";
-const DEFAULT_DISHES = ["红烧肉", "麻辣烫", "黄焖鸡", "番茄炒蛋", "酸菜鱼", "炒年糕"];
+const DEFAULT_DISHES = ["干煸四季豆","干锅牛肉","炒时蔬","豆干肉丝","蒜苗回锅肉"];
 
 const palette = [
   "#ff6b2c",
